@@ -1,4 +1,4 @@
-# My Toolbox
+# Personal Modular Assistant
 
 A minimal Electron app with a browser-style tab bar. Tab contents are blank for now.
 
