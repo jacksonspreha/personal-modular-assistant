@@ -21,32 +21,28 @@ body { display: flex; flex-direction: column; }
 
 #tab-bar {
   display: flex;
-  align-items: flex-end;
-  gap: 4px;
-  padding: 8px 8px 0;
+  align-items: stretch;
+  height: 36px;
   background: var(--bar-bg);
   user-select: none;
 }
 
+/* Tabs share the full width of the bar equally and shrink as more are added */
 #tabs {
   display: flex;
-  align-items: flex-end;
-  gap: 2px;
+  flex: 1;
   min-width: 0;
-  overflow-x: auto;
-  scrollbar-width: none;
 }
-#tabs::-webkit-scrollbar { display: none; }
 
 .tab {
   display: flex;
   align-items: center;
   gap: 8px;
-  min-width: 110px;
-  max-width: 200px;
-  height: 34px;
-  padding: 0 10px 0 14px;
-  border-radius: 8px 8px 0 0;
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0 8px 0 14px;
+  border-radius: 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
   background: var(--tab-bg);
   color: var(--muted);
   font-size: 13px;
@@ -57,12 +53,14 @@ body { display: flex; flex-direction: column; }
 
 .tab-title {
   flex: 1;
+  min-width: 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
 .tab-close {
+  flex: none;
   width: 18px;
   height: 18px;
   border: none;
@@ -75,18 +73,18 @@ body { display: flex; flex-direction: column; }
 }
 .tab-close:hover { background: rgba(0, 0, 0, 0.12); }
 
+/* Static button pinned to the right edge */
 #new-tab {
-  width: 30px;
-  height: 30px;
-  margin-bottom: 2px;
+  flex: none;
+  width: 40px;
   border: none;
-  border-radius: 50%;
-  background: transparent;
+  border-radius: 0;
+  background: var(--bar-bg);
   color: var(--muted);
   font-size: 20px;
   cursor: pointer;
 }
-#new-tab:hover { background: rgba(0, 0, 0, 0.1); }
+#new-tab:hover { background: #d3d7dc; }
 
 #content { flex: 1; position: relative; }
 
