@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self'; script-src 'self'"
+    />
+    <title>Personal Modular Assistant</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="tab-bar" role="tablist">
+      <div id="tabs"></div>
+      <button id="new-tab" title="New tab (Ctrl/Cmd+T)">+</button>
+    </div>
+    <main id="content"></main>
+    <script src="renderer.js"></script>
+  </body>
+</html>

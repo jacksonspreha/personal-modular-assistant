@@ -1,0 +1,13 @@
+{
+  "name": "my-toolbox",
+  "version": "0.1.0",
+  "description": "Personal modular desktop app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^45.3.1"
+  }
+}
